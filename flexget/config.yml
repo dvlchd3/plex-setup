@@ -2,58 +2,13 @@ presets:
   global:
     include:
       - bittorrent.yml
-      - global-filters.yml
-    free_space:
-      path: /media/plex
-      space: 10000
-    pathscrub: windows
-    domain_delay:
-      bt-chat: 5 seconds
-      torrentz.eu: 5 seconds
-    verify_ssl_certificates: no
-    magnets: no
+      - global.yml
     
   tv-global:
-    inputs:
-      - rss: 'http://www.torlock.com/television/rss.xml'
-      - rss: 'http://torrentz.eu/feed_verified?q=tv'
-      - rss: 'http://ezrss.it/feed/'
-      - rss: 'http://showrss.karmorra.info/feeds/all.rss'
-      - rss: 'http://rss.bt-chat.com/?group=3'
-      - rss: 'http://rss.thepiratebay.sx/205'
-    exists_series:
-      - '/media/plex/TV'
-      - '/media/plex/Jude/TV'
-      - '/media/plex/staging'
-      - '/media/wdlive/Movies/TV'
-      - '/media/wdlive/Movies/staging'
-    set:
-      content_filename: '{{series_name}} - {{series_id}}{{location|pathext}}'
-    thetvdb_lookup: yes
+    include:
+      - tv-global.yml
     
 tasks:
   tv-parent:
-    priority: 10
-    preset:
-      - tv-global
-    import_series:
-      from:
-        thetvdb_favorites:
-          account_id: 2919C3FB2B0FF019
-          strip_dates: yes
-    series:
-      settings:
-        Best:
-          target: 720p+ hdtv+
-          timeframe: 5 days
-          quality: 720p+ dvdscr+
-        Better:
-          target: 720p+ dvdscr+
-          timeframe: 3 days
-          quality: 480p+ webrip+
-        Average:
-          target: webrip+
-          timeframe: 12 hours
-          quality: preair+
-    set:
-      movedone: '/media/plex/TV/{{series_name}}/Season {{series_season}}'
+    include:
+      - tv-parent.yml
