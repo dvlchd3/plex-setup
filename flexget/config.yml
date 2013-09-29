@@ -55,7 +55,7 @@ presets:
       - '/media/wdlive/Movies/TV'
       - '/media/wdlive/Movies/staging'
     set:
-      content_filename: '{{series_name}} - {{series_id}}{{location|pathext}}
+      content_filename: '{{series_name}} - {{series_id}}{{location|pathext}}'
     thetvdb_lookup: yes
     
 tasks:
