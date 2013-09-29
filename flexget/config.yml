@@ -2,13 +2,13 @@ presets:
   global:
     include:
       - bittorrent.yml
-      - global.yml
+      - presets/global.yml
     
   tv-global:
     include:
-      - tv-global.yml
+      - presets/tv-global.yml
     
 tasks:
   tv-parent:
     include:
-      - tv-parent.yml
+      - tasks/tv-parent.yml

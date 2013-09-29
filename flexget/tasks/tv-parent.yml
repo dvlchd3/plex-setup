@@ -1,0 +1,24 @@
+priority: 10
+preset:
+  - tv-global
+import_series:
+  from:
+    thetvdb_favorites:
+      account_id: 2919C3FB2B0FF019
+      strip_dates: yes
+series:
+  settings:
+    Best:
+      target: 720p+ hdtv+
+      timeframe: 5 days
+      quality: 720p+ dvdscr+
+    Better:
+      target: 720p+ dvdscr+
+      timeframe: 3 days
+      quality: 480p+ webrip+
+    Average:
+      target: webrip+
+      timeframe: 12 hours
+      quality: preair+
+set:
+  movedone: '/media/plex/TV/{{series_name}}/Season {{series_season}}'

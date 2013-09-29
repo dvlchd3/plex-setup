@@ -1,0 +1,16 @@
+inputs:
+  - rss: 'http://www.torlock.com/television/rss.xml'
+  - rss: 'http://torrentz.eu/feed_verified?q=tv'
+  - rss: 'http://ezrss.it/feed/'
+  - rss: 'http://showrss.karmorra.info/feeds/all.rss'
+  - rss: 'http://rss.bt-chat.com/?group=3'
+  - rss: 'http://rss.thepiratebay.sx/205'
+exists_series:
+  - '/media/plex/TV'
+  - '/media/plex/Jude/TV'
+  - '/media/plex/staging'
+  - '/media/wdlive/Movies/TV'
+  - '/media/wdlive/Movies/staging'
+set:
+  content_filename: '{{series_name}} - {{series_id}}{{location|pathext}}'
+thetvdb_lookup: yes
