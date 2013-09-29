@@ -12,3 +12,6 @@ tasks:
   tv-parent:
     include:
       - tasks/tv-parent.yml
+  tv-children:
+    include:
+      - tasks/tv-children.yml
