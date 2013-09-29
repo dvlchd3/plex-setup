@@ -1,0 +1,28 @@
+regexp:
+  reject:
+    - (s|d)ub(s|bed)?\b: {from: title}
+    - \b(duo|tri|quadri|tetra|penta)logy\b: {from: title}
+    - \b3-?D\b: {from: title}
+    - \btrailer\b: {from: title}
+    - \bR5\b: {from: title}
+    - \bWEBSCR\b: {from: title}
+    - \bscreener\b: {from: title}
+    - \bTS\b: {from: title}
+    - \bCam\b: {from: title}
+    - '{C_P}': {from: title}
+    - TrTd TeaM: {from: title}
+    - \[TNTVillage\]: {from: title}
+    - \[facepalm\]: {from: title}
+    - \bASAP\b: {from: title}
+torrent_alive:
+  min_seeds: 10
+  reject_for: 1 hour
+content_filter:
+  require:
+    - '*.avi'
+    - '*.mkv'
+    - '*.mpg'
+    - '*.mp4'
+  reject:
+    - 'password.txt'
+    - '*.wmv'
