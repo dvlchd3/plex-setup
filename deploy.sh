@@ -1,2 +1,2 @@
 #!/bin/sh
-cp flexget/* ~/.flexget/
+cp -r flexget/* ~/.flexget/
